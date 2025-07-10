@@ -6,7 +6,7 @@ $('.banner_sec_slider').slick({
   speed: 900,
   fade: true,
   cssEase: 'linear',
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 1000,
   customPaging: function (slider, i) {
     let index = (i + 1).toString().padStart(2, '0'); // 01, 02, 03

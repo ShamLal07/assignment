@@ -3,7 +3,7 @@ $('.banner_sec_slider').slick({
   dots: true,
   arrows: false,
   infinite: true,
-  speed: 900,
+  speed:1100,
   fade: true,
   cssEase: 'linear',
     autoplay: true,

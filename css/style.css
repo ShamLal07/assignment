@@ -1128,9 +1128,18 @@ footer {
     margin-left: 3%;
   }
   .banner_sec_slider ul.slick-dots {
-    left: 50%;
-    bottom: 5%;
-    transform: translate(-83%);
+      left: 50%;
+      bottom: 12%;
+      transform: translate(-83%);
+      gap: 5px;
+  }
+  .banner_sec_slider .slick-dots li {
+    width: 12px !important;
+    height: 12px !important;
+    opacity: 0.5;
+  }
+  .banner_sec_slider li.slick-active {
+    opacity: 1;
   }
   .banner_text_block.animate-in {
     gap: 1rem;
@@ -1258,5 +1267,15 @@ footer {
   .footer_header img {
     max-width: 12rem;
     filter: invert(1);
+}
+.side-menu {
+    min-width: 60%;
+}
+.banner_sec:after {
+    background: transparent;
+    clip-path: none;
+}
+.banner_text_block.d-flex.flex-col.align-center.animate-in {
+    margin-top: -5rem;
 }
 }

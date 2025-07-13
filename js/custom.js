@@ -3,16 +3,17 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 900,
+    speed: 1200,
     fade: true,
     cssEase: 'linear',
-    autoplaySpeed: 1000,
+    autoplay:true,
+    autoplaySpeed: 3000,
     customPaging: function (slider, i) {
       if (window.innerWidth > 991) {
         let index = (i + 1).toString().padStart(2, '0');
         return `<button>${index}</button>`;
       }
-      return `<button></button>`; // default dot on mobile
+      return `<button></button>`; 
     },
     responsive: [
       {
@@ -20,7 +21,7 @@ $(document).ready(function () {
         settings: {
           dots: true,
           arrows: false
-          // customPaging won't be triggered here due to default <button>
+
         }
       }
     ]
@@ -50,7 +51,7 @@ $('.close_icon').on('click', function () {
   $('body').removeClass('open-popup');
 });
 
-$('.search-popup').on('click', function (e) {
+$('.search-gi').on('click', function (e) {
   if (!$(e.target).closest('.search-popup-box').length) {
     $('body').removeClass('open-popup');
   }

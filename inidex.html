@@ -1,292 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darkwood</title>
-    <!-- Slick Slider CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header class="site-header">
-        <div class="lg-container">
-            <div class="site-header__container d-flex">
-                <div class="header-wrapper w-full">
-                    <div class="siter_header_wrapper d-flex align-center justify-between">
-                        <!-- Logo -->
-                        <div class="site-header__logo">
-                            <a href="#">
-                                <img src="images/brand-logo.png" alt="Darkwood Logo" width="160" height="auto">
-                            </a>
-                        </div>
-                        <!-- Navigation and Search -->
-                        <div class="site_naviagation d-flex align-center justify-center">
-                            <nav class="site-header__nav">
-                                <ul class="nav__list d-flex align-center justify-center">
-                                    <li class="nav__item"><a href="#">Manage My Subscription</a></li>
-                                    <li class="nav__item"><a href="#">Custom Request</a></li>
-                                    <li class="nav__item"><a href="#">Discover</a></li>
-                                    <li class="nav__item"><a href="#">Login</a></li>
-                                </ul>
-                            </nav>
-                            <div class="site-header__search">
-                                <a href="#"><img src="./images/search-icon.svg" alt="Search"></a>
-                            </div>
-                        </div>
-                        <!-- Mobile Menu Toggle -->
-                        <div class="site-header__menu-toggle">
-                            <div class="menu-text">menu</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Hamburger Menu -->
-                <div class="menu_hamburger_outer">
-                    <div class="menu_hamburger d-flex align-center justify-center">
-                        <span class="menu-toggle__line"></span>
-                        <span class="menu-toggle__line"></span>
-                        <span class="menu-toggle__line"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Darkwood</title>
+        <!-- Slick Slider CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-    <!-- Banner Section -->
-    <section class="banner_sec relative">
-        <div class="lg-container">
-            <div class="banner-wrapper w-full">
-                <!-- Banner Slider -->
-                <div class="banner_sec_slider">
-                    <!-- Slide 1 -->
-                    <div class="banner_sec_rw d-flex align-center relative justify-center">
-                        <div class="banner_sec_col lft_col">
-                            <img src="images/banner-2.png" alt="Banner Image">
+    <body>
+        <!-- Header Section -->
+        <header class="site-header">
+            <div class="lg-container">
+                <div class="site-header__container d-flex">
+                    <div class="header-wrapper w-full">
+                        <div
+                            class="siter_header_wrapper d-flex align-center justify-between">
+                            <!-- Logo -->
+                            <div class="site-header__logo">
+                                <a href="#">
+                                    <img src="images/brand-logo.png"
+                                        alt="Darkwood Logo" width="160"
+                                        height="auto">
+                                </a>
+                            </div>
+                            <!-- Navigation and Search -->
+                            <div
+                                class="site_naviagation d-flex align-center justify-center">
+                                <nav class="site-header__nav">
+                                    <ul
+                                        class="nav__list d-flex align-center justify-center">
+                                        <li class="nav__item"><a href="#">Manage
+                                                My Subscription</a></li>
+                                        <li class="nav__item"><a href="#">Custom
+                                                Request</a></li>
+                                        <li class="nav__item"><a
+                                                href="#">Discover</a></li>
+                                        <li class="nav__item"><a
+                                                href="#">Login</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="site-header__search"
+                                    id="search-btn">
+                                    <a href="#"><img
+                                            src="./images/search-icon.svg"
+                                            alt="Search"></a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu Toggle -->
+                            <div class="site-header__menu-toggle">
+                                <div class="menu-text">menu</div>
+                            </div>
                         </div>
-                        <div class="banner_sec_col rt_col text-center">
-                            <div class="banner_text_block d-flex flex-col align-center">
-                                <div class="banner-tagline relative text-center">
-                                    <p>welcome to darkwood</p>
-                                </div>
-                                <div class="banner-info d-flex justify-center flex-col">
-                                    <h1>model photography</h1>
-                                    <div class="img_shape text-center d-flex justify-center align-center">
-                                        <img src="images/shape.png" alt="Shape">
+                    </div>
+                    <div class="overlay"></div>
+                    <!-- Hamburger Menu -->
+                    <div class="menu_hamburger_outer">
+                        <div
+                            class="menu_hamburger d-flex align-center justify-center">
+                            <span class="menu-toggle__line"></span>
+                            <span class="menu-toggle__line"></span>
+                            <span class="menu-toggle__line"></span>
+                        </div>
+                        <div class="side-menu">
+                            <div class="menu-content">
+                                <button class="close-menu"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="white"></rect>
+                                    <path d="M7 17L16.8995 7.10051" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7 7.00001L16.8995 16.8995" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></button>
+                                <p>Menu Content</p>
+                                <p>Scroll this menu only...</p>
+                                <p>More
+                                    Content...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-popup">
+                        <div class="search-popup-box relative">
+                            <div class="search text-center ">
+                                <h2>What are You Looking For</h2>
+                                <div class="search_box relative">
+                                    <div class="relative">
+                                        <input type="text"
+                                            placeholder="Search......">
+                                        <button>
+                                            <img class="close-btn"
+                                                src="./images/search-icon.svg"
+                                                alt="Search">
+                                        </button>
                                     </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
                                 </div>
-                                <div class="btn">
-                                    <a href="#">Read More <img src="images/arrow.png" alt="Arrow"></a>
+                                <div class="close_icon">
+                                    <?xml version="1.0" encoding="utf-8"?>
+                                    <svg width="32" height="32" viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="white" />
+                                        <path d="M7 17L16.8995 7.10051"
+                                            stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M7 7.00001L16.8995 16.8995"
+                                            stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 2 -->
-                    <div class="banner_sec_rw d-flex align-center relative justify-center">
-                        <div class="banner_sec_col lft_col">
-                            <img src="images/banner1.png" alt="Banner Image">
-                        </div>
-                        <div class="banner_sec_col rt_col text-center">
-                            <div class="banner_text_block d-flex flex-col align-center">
-                                <div class="banner-tagline relative text-center">
-                                    <p>welcome to darkwood</p>
-                                </div>
-                                <div class="banner-info d-flex justify-center flex-col">
-                                    <h1>model photography</h1>
-                                    <div class="img_shape text-center d-flex justify-center align-center">
-                                        <img src="images/shape.png" alt="Shape">
-                                    </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-                                </div>
-                                <div class="btn">
-                                    <a href="#">Read More <img src="images/arrow.png" alt="Arrow"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="banner_sec_rw d-flex align-center relative justify-center">
-                        <div class="banner_sec_col lft_col">
-                            <img src="images/banner-3.png" alt="Banner Image">
-                        </div>
-                        <div class="banner_sec_col rt_col text-center">
-                            <div class="banner_text_block d-flex flex-col align-center">
-                                <div class="banner-tagline relative text-center">
-                                    <p>welcome to darkwood</p>
-                                </div>
-                                <div class="banner-info d-flex justify-center flex-col">
-                                    <h1>model photography</h1>
-                                    <div class="img_shape text-center d-flex justify-center align-center">
-                                        <img src="images/shape.png" alt="Shape">
-                                    </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-                                </div>
-                                <div class="btn">
-                                    <a href="#">Read More <img src="images/arrow.png" alt="Arrow"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Subscription Button -->
-                <div class="side-btn">
-                    <a href="#">join subscription benefits <img src="images/down-arrow.png" alt="Arrow"></a>
-                </div>
-                <!-- Social Links -->
-                <div class="banner_sociel_link">
-                    <ul>
-                        <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
-                        <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
-                        <li><a href="#"><img src="images/snap.png" alt="Snapchat"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Featured Section -->
-    <section class="feautre-sec p-5">
-        <div class="feautre-sec_inner lg-container">
-            <!-- Section Header -->
-            <div class="feautre-sec_header text-center align-center d-flex justify-cenetr flex-col">
-                <div class="subtitle">models</div>
-                <h2>Featured model of <span>the month</span></h2>
-                <img src="images/shape.png" alt="Shape">
-            </div>
-        </div>
-        <!-- Featured Grid -->
-        <div class="feautured_grid relative">
-            <!-- Grid Column 1 -->
-            <div class="feautured_grid_col grid_col-1">
-                <div class="feautured_grid_col_block">
-                <div class="feautured_grid_cnt d-flex flex-col item-start">
-                    <div class="subtitle">profile</div>
-                    <h3 class="h2">miripic</h3>
-                    <img src="images/title-svg.svg" alt="Title Shape">
                 </div>
-                <div class="featured-txt">
-                    <p>I am a fashion lover. I just love following the craziest and newest fashion trends and designers in the industry. I want to share all of these with you guys! I will present and provide you the links where you can buy your own fashion items so all you have to do is rock the looks in your own personal way!</p>
-                </div>
-                </div>
+            </header>
 
-            </div>
-            <!-- Grid Column 2 -->
-            <div class="feautured_grid_col grid_col-2">
-                <div class="featured-img-wrapper relative">
-                    <img class="w-full h-full" src="images/feature-img.jpg" alt="Featured Model">
-                </div>
-            </div>
-            <!-- Grid Column 3 -->
-            <div class="feautured_grid_col grid_col-3 d-flex justify-center align-center w-full">
-                <div class="feautured_grid_cnt_wpr">
-                    <div class="feautured_grid_cnt">
-                        <div class="profile-card">
-                            <div class="row">
-                                <span class="label">BORN :</span>
-                                <span class="value">25 Sept, 1980</span>
+            <!-- Banner Section -->
+            <section class="banner_sec relative">
+                <div class="lg-container">
+                    <div class="banner-wrapper w-full">
+                        <!-- Banner Slider -->
+                        <div class="banner_sec_slider">
+                            <!-- Slide 1 -->
+                            <div
+                                class="banner_sec_rw d-flex align-center relative justify-center">
+                                <div class="banner_sec_col lft_col">
+                                    <img src="images/banner-2.png"
+                                        alt="Banner Image">
+                                </div>
+                                <div class="banner_sec_col rt_col text-center">
+                                    <div
+                                        class="banner_text_block d-flex flex-col align-center">
+                                        <div
+                                            class="banner-tagline relative text-center">
+                                            <p>welcome to darkwood</p>
+                                        </div>
+                                        <div
+                                            class="banner-info d-flex justify-center flex-col">
+                                            <h1>model photography</h1>
+                                            <div
+                                                class="img_shape text-center d-flex justify-center align-center">
+                                                <img src="images/shape.png"
+                                                    alt="Shape">
+                                            </div>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem
+                                                Ipsum has been the industry's
+                                                standard dummy text ever.</p>
+                                        </div>
+                                        <div class="btn">
+                                            <a href="#">Read More <img
+                                                    src="images/arrow.png"
+                                                    alt="Arrow"></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <hr>
-                            <div class="row">
-                                <span class="label">HEIGHT :</span>
-                                <span class="value">178 cm / 5’ 10”</span>
+                            <!-- Slide 2 -->
+                            <div
+                                class="banner_sec_rw d-flex align-center relative justify-center">
+                                <div class="banner_sec_col lft_col">
+                                    <img src="images/banner1.png"
+                                        alt="Banner Image">
+                                </div>
+                                <div class="banner_sec_col rt_col text-center">
+                                    <div
+                                        class="banner_text_block d-flex flex-col align-center">
+                                        <div
+                                            class="banner-tagline relative text-center">
+                                            <p>welcome to darkwood</p>
+                                        </div>
+                                        <div
+                                            class="banner-info d-flex justify-center flex-col">
+                                            <h1>model photography</h1>
+                                            <div
+                                                class="img_shape text-center d-flex justify-center align-center">
+                                                <img src="images/shape.png"
+                                                    alt="Shape">
+                                            </div>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem
+                                                Ipsum has been the industry's
+                                                standard dummy text ever.</p>
+                                        </div>
+                                        <div class="btn">
+                                            <a href="#">Read More <img
+                                                    src="images/arrow.png"
+                                                    alt="Arrow"></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <hr>
-                            <div class="row">
-                                <span class="label">BIO :</span>
-                                <ul class="value-list">
-                                    <li>Darkwood Model</li>
-                                    <li>Good Attitude</li>
-                                    <li>Smart Skills</li>
-                                    <li>Lore Ipsum</li>
-                                    <li>Dummy Text</li>
-                                </ul>
+                            <!-- Slide 3 -->
+                            <div
+                                class="banner_sec_rw d-flex align-center relative justify-center">
+                                <div class="banner_sec_col lft_col">
+                                    <img src="images/banner-3.png"
+                                        alt="Banner Image">
+                                </div>
+                                <div class="banner_sec_col rt_col text-center">
+                                    <div
+                                        class="banner_text_block d-flex flex-col align-center">
+                                        <div
+                                            class="banner-tagline relative text-center">
+                                            <p>welcome to darkwood</p>
+                                        </div>
+                                        <div
+                                            class="banner-info d-flex justify-center flex-col">
+                                            <h1>model photography</h1>
+                                            <div
+                                                class="img_shape text-center d-flex justify-center align-center">
+                                                <img src="images/shape.png"
+                                                    alt="Shape">
+                                            </div>
+                                            <p>Lorem Ipsum is simply dummy text
+                                                of the printing and typesetting
+                                                industry. Lorem
+                                                Ipsum has been the industry's
+                                                standard dummy text ever.</p>
+                                        </div>
+                                        <div class="btn">
+                                            <a href="#">Read More <img
+                                                    src="images/arrow.png"
+                                                    alt="Arrow"></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <hr>
-                            <div class="row">
-                                <span class="label">FAV :</span>
-                                <ul class="value-list">
-                                    <li>Darkwood Model</li>
-                                    <li>Good Attitude</li>
-                                    <li>Smart Skills</li>
-                                    <li>Lorel Ipsum</li>
-                                    <li>Smart Skills</li>
-                                </ul>
-                            </div>
-                        </div>    
+                        </div>
+                        <!-- Subscription Button -->
+                        <div class="side-btn">
+                            <a href="#">join subscription benefits <img
+                                    src="images/down-arrow.png" alt="Arrow"></a>
+                        </div>
+                        <!-- Social Links -->
+                        <div class="banner_sociel_link">
+                            <ul>
+                                <li><a href="#"><img src="images/facebook.png"
+                                            alt="Facebook"></a></li>
+                                <li><a href="#"><img src="images/twitter.png"
+                                            alt="Twitter"></a></li>
+                                <li><a href="#"><img src="images/snap.png"
+                                            alt="Snapchat"></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- Shadow Box .v.-git branch -M main->
+                </div>
+            </section>
+
+            <!-- Featured Section -->
+            <section class="feautre-sec p-5">
+                <div class="feautre-sec_inner lg-container">
+                    <!-- Section Header -->
+                    <div
+                        class="feautre-sec_header text-center align-center d-flex justify-cenetr flex-col">
+                        <div class="subtitle">models</div>
+                        <h2>Featured model of <span>the month</span></h2>
+                        <img src="images/shape.png" alt="Shape">
+                    </div>
+                </div>
+                <!-- Featured Grid -->
+                <div class="feautured_grid relative">
+                    <!-- Grid Column 1 -->
+                    <div class="feautured_grid_col grid_col-1">
+                        <div class="feautured_grid_col_block">
+                            <div
+                                class="feautured_grid_cnt d-flex flex-col item-start">
+                                <div class="subtitle">profile</div>
+                                <h3 class="h2">miripic</h3>
+                                <img src="images/title-svg.svg"
+                                    alt="Title Shape">
+                            </div>
+                            <div class="featured-txt">
+                                <p>I am a fashion lover. I just love following
+                                    the craziest and newest fashion trends and
+                                    designers in the industry. I want to share
+                                    all of these with you guys! I will present
+                                    and
+                                    provide you the links where you can buy your
+                                    own fashion items so all you have to do is
+                                    rock
+                                    the looks in your own personal way!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Grid Column 2 -->
+                    <div class="feautured_grid_col grid_col-2">
+                        <div class="featured-img-wrapper relative">
+                            <img class="w-full h-full"
+                                src="images/feature-img.jpg"
+                                alt="Featured Model">
+                        </div>
+                    </div>
+                    <!-- Grid Column 3 -->
+                    <div
+                        class="feautured_grid_col grid_col-3 d-flex justify-center align-center w-full">
+                        <div class="feautured_grid_cnt_wpr">
+                            <div class="feautured_grid_cnt">
+                                <div class="profile-card">
+                                    <div class="row">
+                                        <span class="label">BORN :</span>
+                                        <span class="value">25 Sept, 1980</span>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <span class="label">HEIGHT :</span>
+                                        <span class="value">178 cm / 5’
+                                            10”</span>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <span class="label">BIO :</span>
+                                        <ul class="value-list">
+                                            <li>Darkwood Model</li>
+                                            <li>Good Attitude</li>
+                                            <li>Smart Skills</li>
+                                            <li>Lore Ipsum</li>
+                                            <li>Dummy Text</li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <span class="label">FAV :</span>
+                                        <ul class="value-list">
+                                            <li>Darkwood Model</li>
+                                            <li>Good Attitude</li>
+                                            <li>Smart Skills</li>
+                                            <li>Lorel Ipsum</li>
+                                            <li>Smart Skills</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Shadow Box-->
                     <div class="shadow_box_wrapper">
                         <div class="shadow_box"></div>
                     </div>
                 </div>
             </div>
-            <!-- Subscription Button . -->
-            <div class="side-btn">
-                <a href="#">view full profile <img src="images/down-arrow.png" alt="Arrow"></a>
-            </div>
-        </div>
-    </section>
+            <!-- Subscription Button -->
+                            <div class="side-btn">
+                                <a href="#">view full profile <img
+                                        src="images/down-arrow.png"
+                                        alt="Arrow"></a>
+                            </div>
+                        </div>
+                    </section>
 
-    <!-- Footer Section -->
-    <footer class="relative">
-        <div class="ftr-bg w-full">
-            <img src="images/footer-bg.svg" alt="Footer Background">
-        </div>
-        <div class="outer-footer">
-            <!-- Footer Header -->
-            <div class="footer_rw">
-                <div class="footer_header text-center">
-                    <div class="logo d-flex justify-center align-center flex-col gap">
-                        <a href="#">
-                            <img src="images/brand-logo.png" alt="Darkwood Logo">
-                        </a>
-                        <img src="images/title-svg.svg" alt="Title Shape">
-                    </div>
-                </div>
-                <!-- Subscribe Form -->
-                <div class="ftr_subcribe_block">
-                    <h2>Subscribe For More Updates</h2>
-                    <div class="email-subscribe">
-                        <input type="email" placeholder="Enter your email address">
-                        <button type="submit">SUBMIT <span class="arrow">→</span></button>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Grid -->
-            <div class="footer_grid_col">
-                <div class="footer_col">
-                    <h3>about us</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                </div>
-                <div class="footer_col">
-                    <h3>Timings</h3>
-                    <p>Mon-Fri : 9 AM - 5 AM<br>Saturday : 9 AM - 5 AM<br>Sunday : Closed</p>
-                </div>
-                <div class="footer_col">
-                    <h3>venus</h3>
-                    <p>Darkwood, 122 street name, USA, NY 1011<br>Email: darkwoodphotography@gmail.com<br>Telephone: +1 000 000 000</p>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright -->
-        <div class="copy_right text-center">
-            <p>Darkwood &copy; 2018. All Rights Reserved</p>
-        </div>
-        <!-- Contact Button -->
-        <div class="side-btn">
-            <a href="#">contact our site <img src="images/down-arrow.png" alt="Arrow"></a>
-        </div>
-    </footer>
+                    <!-- Footer Section -->
+                    <footer class="relative">
+                        <div class="ftr-bg w-full">
+                            <img src="images/footer-bg.svg"
+                                alt="Footer Background">
+                        </div>
+                        <div class="outer-footer">
+                            <!-- Footer Header -->
+                            <div class="footer_rw">
+                                <div class="footer_header text-center">
+                                    <div
+                                        class="logo d-flex justify-center align-center flex-col gap">
+                                        <a href="#">
+                                            <img src="images/brand-logo.png"
+                                                alt="Darkwood Logo">
+                                        </a>
+                                        <img src="images/title-svg.svg"
+                                            alt="Title Shape">
+                                    </div>
+                                </div>
+                                <!-- Subscribe Form -->
+                                <div class="ftr_subcribe_block">
+                                    <h2>Subscribe For More Updates</h2>
+                                    <div class="email-subscribe">
+                                        <input type="email"
+                                            placeholder="Enter your email address">
+                                        <button type="submit">SUBMIT <span
+                                                class="arrow">→</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Grid -->
+                            <div class="footer_grid_col">
+                                <div class="footer_col">
+                                    <h3>about us</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the
+                                        printing and typesetting industry. Lorem
+                                        Ipsum has been
+                                        the industry's standard dummy text</p>
+                                </div>
+                                <div class="footer_col">
+                                    <h3>Timings</h3>
+                                    <p>Mon-Fri : 9 AM - 5 AM<br>Saturday : 9 AM
+                                        - 5 AM<br>Sunday : Closed</p>
+                                </div>
+                                <div class="footer_col">
+                                    <h3>venus</h3>
+                                    <p>Darkwood, 122 street name, USA, NY
+                                        1011<br>Email:
+                                        darkwoodphotography@gmail.com<br>Telephone:
+                                        +1
+                                        000 000 000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Copyright -->
+                        <div class="copy_right text-center">
+                            <p>Darkwood &copy; 2018. All Rights Reserved</p>
+                        </div>
+                        <!-- Contact Button -->
+                        <div class="side-btn">
+                            <a href="#">contact our site <img
+                                    src="images/down-arrow.png" alt="Arrow"></a>
+                        </div>
+                    </footer>
 
-    <!-- Scripts -->
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Slick Slider JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/custom.js"></script>
-</body>
-</html>
+                    <!-- Scripts -->
+                    <!-- jQuery -->
+                    <script
+                        src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <!-- Slick Slider JS -->
+                    <script
+                        src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+                    <!-- Custom JS -->
+                    <script src="js/custom.js"></script>
+                </body>
+
+            </html>

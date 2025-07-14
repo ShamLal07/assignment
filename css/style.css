@@ -789,9 +789,9 @@ footer {
   transition: box-shadow var(--transition);
 }
 
-.email-subscribe:hover {
+/* .email-subscribe:hover {
   box-shadow: var(--shadow-hover);
-}
+} */
 
 .email-subscribe input {
   border: none;

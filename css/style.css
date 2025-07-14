@@ -596,7 +596,6 @@ body.menu-open, body.open-popup{
   padding-bottom: 6rem;
   gap: 1rem;
 }
-
 .feautured_grid {
   display: grid;
   grid-template-columns: 25% 39% 36%;
@@ -1168,7 +1167,13 @@ footer {
     display: inline-block;
   }
   .featured-txt {
-    width: calc(100% - 7.8rem);
+    width: 100%;
+  }
+  .feautre-sec_header {
+    margin-left: 3%;
+  }
+  .feautre-sec_header, .feautured_grid_col.grid_col-1 {
+    margin-right: calc(50px + 3%);
   }
   .feautured_grid_cnt {
     gap: 1rem;
